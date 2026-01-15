@@ -1,0 +1,191 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Regular.woff2') format('tff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Bold.ttf') format('tff');
+    font-weight: 700;
+    font-style: bold;
+}
+
+:root { 
+    /*###Colors*/
+
+--Red: hsl(4, 100%, 67%);
+--Blue800: hsl(234, 29%, 20%);
+--Blue700: hsl(235, 18%, 26%);
+--Grey: hsl(0, 0%,58%);
+--White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: var(--Blue700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh
+}
+.card {
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 375px;
+}
+.card-image img {
+    width: 100%;
+    display: block;
+}
+.card-content {
+    padding: 2.5rem 1.5rem;
+}
+.card-content .description {
+    margin: 1rem 0 1.5rem 0;
+    line-height: 1.5;
+}
+.feature-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.625rem;
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.label-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .4rem;
+    position: relative;
+}
+.label-row label {
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--Blue800);
+    margin-bottom: .4rem;
+}
+.error-msg {
+  color: var(--Red);
+  font-size: 12px;
+  font-weight: 700;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 5%;
+  
+}
+.input {
+  padding: 0.875rem 0.625rem;
+  border-radius: 0.313rem;
+  border: 1px solid rgba(128, 128, 128, 0.463);
+}
+.input::placeholder {
+    font-size: .875rem;
+    color: var(--Grey);
+}
+.input-error {
+    border: 1px solid var(--Red);
+    background-color: hsla(4, 100%, 67%, 0.15); 
+    color: var(--Red);
+}
+.btn {
+    background-color: var(--Blue800);
+    color: var(--White);
+    border: none;
+    margin-top: .5rem;
+    border-radius: 0.313rem;
+    padding: 0.875rem 0.625rem;
+    font-size: .825rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--Red);
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row-reverse; 
+    max-width: 900px;
+    padding: 24px;
+    border-radius: 36px;
+  }
+
+  .card-image {
+    flex: 1.8;
+  }
+  .card-image img {
+    height: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    flex: 1.2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* Success message styles */
+.hidden {
+    display: none;
+}
+.success-card {
+    max-width: 440px;
+    text-align: left;
+    background-color: var(--White);
+    padding: 3rem;
+    border-radius: 2rem;
+    flex-direction: column;
+}
+.success-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+.success-title {
+    margin: 1rem 0;
+    color: var(--Blue800);
+    font-size: 2.8rem;
+}
+.success-description {
+    line-height: 1.7;
+    font-size: .825rem;
+    margin-bottom: 1.5rem;
+    padding-right: 2rem;
+}
+#dismiss-btn {
+    width: 100%;
+    padding: 18px;
+    background-color: var(--Blue800);
+    color: var(--White);
+    border: none;
+    border-radius: .525rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#dismiss-btn:hover {
+    background: linear-gradient(to right, #ff527b, #ff6a3a);
+    box-shadow: 0 10px 20px rgba(255, 82, 123, 0.4);
+}

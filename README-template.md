@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/GabrielNoss/Newsletter-Sign-Up-)
+- Live Site URL: [GithHub Pages](https://gabrielnoss.github.io/Newsletter-Sign-Up-/)
 
 ## My process
 
